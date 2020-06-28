@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style> 
+    
+    
+    #id02{
+      background-color: #cc2262;
+      color: black;
+      height: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+    /* set a hover effect for the button*/ 
+    
+    
+    /*set extra style for the cancel button*/ 
+     .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px; 
+        background-color:grey;
+        color: black; 
+    } 
+    
+    /*centre the display image inside the container*/ 
+    /*.imgcontainer { 
+        text-align: center; 
+        margin: 24px 0 12px 0; 
+        position: relative; 
+    } 
+    
+    /*set image properties
+     img.avatar { 
+        width: 40%; 
+        border-radius: 50%; 
+    } */
+    
+    /*set padding to the container*/ 
+     .container { 
+        padding: 16px; 
+    } 
+      
+    /*set the forgot password text*/ 
+     span.psw { 
+        float: right; 
+        padding-top: 16px;
+        
+        padding-bottom: 20px; 
+    } 
+    
+    /*set the Modal background*/ 
+    .modal { 
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0, 0, 0); 
+        background-color: rgba(0, 0, 0, 0.4); 
+        padding-top: 60px; 
+
+    } 
+    
+    /*style the model content box*/ 
+    .modal-content { 
+        background-color: #fefefe; 
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888; 
+        width: 80%; 
+        padding-bottom: 20px;
+    } 
+    
+    /*style the close button*/ 
+     .close { 
+        position: absolute; 
+        right: 25px; 
+        top: 0; 
+        color: #000; 
+        font-size: 35px; 
+        font-weight: bold; 
+    } 
+      
+    .close:hover, 
+    .close:focus { 
+        color: red; 
+        cursor: pointer; 
+    } 
+    
+    /* add zoom animation*/ 
+    .animate { 
+        -webkit-animation: animatezoom 0.6s; 
+        animation: animatezoom 0.6s 
+    } 
+      
+    @-webkit-keyframes animatezoom { 
+        from { 
+            -webkit-transform: scale(0) 
+        } 
+        to { 
+            -webkit-transform: scale(1) 
+        } 
+    } 
+      
+    @keyframes animatezoom { 
+        from { 
+            transform: scale(0) 
+        } 
+        to { 
+            transform: scale(1) 
+        } 
+    } 
+      
+    @media screen and (max-width: 300px) { 
+        span.psw { 
+            display: block; 
+            float: none;
+            margin-left: 10px; 
+        } 
+        .cancelbtn { 
+            width: 100%; 
+        } 
+    } 
+</style>
+	</head>
+	<body>
+		<header>
+			<div class="slider">
+				<div class="load">
+				</div>
+			<div class="main1">
+				<div class="box">
+				<div class="logo">
+					<img src="l.png">
+				</div>
+				<ul>
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="game.html">Game</a></li>
+					<li><a href="faq.html">FAQs</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border:none; font-size: 20px; ">Login</button></li>
+					
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+			</div>
+			</div>
+
+			<div id="id01" class="modal"> 
+  
+        <form class="modal-content animate" action="/action_page.php"> 
+            <div class="imgcontainer"> 
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+                
+            </div> 
+  
+            <div class="container"> 
+                <label><b>Username</b></label> 
+                <input type="text" placeholder="Enter Username" name="uname" required style="width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; "> 
+  
+                <label><b>Password</b></label> 
+                <input type="password" placeholder="Enter Password" name="psw" required style="width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; "> 
+  
+                <button type="submit" id="id02" style="color: white;       
+        background-color: grey;
+        cursor: pointer; 
+        width: 100%; ">Login</button> 
+                <input type="checkbox" checked="checked"> Remember me 
+            </div> 
+  
+            <div class="container" style="background-color:#f1f1f1"> 
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+                 <span class="psw" >Forgot <a href="pss.html">password?</a><br> Dont have an Account yet? <a href="register.html">Sign Up</a></span>
+
+                <!--<span class="psw"><br>Forgot <a href="#">password?</a></span> 
+-->
+                
+
+            </div> 
+
+        </form> 
+    </div> 
+  
+    <script type="text/javascript"> 
+        var modal = document.getElementById('id01'); 
+        window.onclick = function(event) { 
+            if (event.target == modal) { 
+                modal.style.display = "none"; 
+            } 
+        } 
+    </script>
+
+    
+			<div>
+				<div class="title">
+					
+  					<h1>
+						The Best Games Out There
+					</h1>
+
+					
+					 <p style="color: #fff">On this list you'll find the best PC games we're playing right now—recent singleplayer hits,<br> thriving esports, and a few modern classics that would improve any library.<br> We'll continue to update this list as new games release, removing older favorites and<br> replacing them with our latest obsessions.<span id="dots">...</span><span id="more">And, despite us loving our home consoles, too, <br>the truth is that PC gaming has always represented the absolute pinnacle of video <br>game excellence, and that distinction  continues in 2020 with some of <br>the most groundbreaking experiences gracing overclocked towers and juiced-up <br>laptops the world over.</span></p>
+
+					<button onclick="myFunction()" id="myBtn">Read more</button> 
+
+				<script>
+					function myFunction() {
+ 				 	var dots = document.getElementById("dots");
+  					var moreText = document.getElementById("more");
+  					var btnText = document.getElementById("myBtn");
+
+					  if (dots.style.display === "none") {
+					    dots.style.display = "inline";
+					    btnText.innerHTML = "Read more";
+					    moreText.style.display = "none";
+					  } else {
+					    dots.style.display = "none";
+					    btnText.innerHTML = "Read less";
+					    moreText.style.display = "inline";
+					  }
+					} 
+					</script>
+
+			</div>
+		
+		</header>
+
+	
+		<table id="aboutus" align="center" width="100%">
+			<tr>
+				<td align="center" width="50%" >
+				<img class="prof" src="1.jpg" width="400px" height="300px">
+     	
+</td>
+
+
+				<td align="left" width="50%">
+			<h2 style="color:  #1a5276 ">About Us</h2>
+			<h1 style="color: #565656">We Believe that Interior Beauty Lasts Long</h1>
+			<p style="color: grey">On this list you'll find the best PC games we're playing right now—recent singleplayer hits,<br> thriving esports, and a few modern classics that would improve any library.<br> We'll continue to update this list as new games release, removing older favorites and<br> replacing them with our latest obsessions.
+				</p>
+			</td>
+			
+     	</tr>
+     	
+     </table>
+
+     
+	
+
+     <div class="subs">
+     	<h1 style="color: #1a5276 ">Subscribe to Our Newsletter</h1>
+     	<input type="email" name="email" placeholder="Enter email address">
+     	<button type="submit" style="color: #1a5276; margin-bottom: 10px">Subscribe</button>
+     </div>
+	<div class="bot">
+		<table width="100%">
+			<tr>
+				<td style="color: white"> About Us </td>
+				<td  style="color: white"> About Us </td>
+				<td  style="color: white"> Travel </td>
+				<td colspan="4" style="color: white" width="100">Contact Us</td>
+			</tr>
+			<tr>
+				<td rowspan="3">On this list you'll find the best PC games we're playing right now—recent singleplayer hits,<br> thriving esports, and a few modern classics that would improve any library.</td>
+ 				<td>advertise</td>
+ 				<td>Lifestyle</td>
+ 				<td width="25"><a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a></td>
+ 				<td width="25"><a href="https://twitter.com/" class="fa fa-twitter"></a></td>
+ 				<td width="25"><a href="https://www.youtube.com/" class="fa fa-youtube"></a></td>
+ 				<td width="25"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></td>
+			</tr>
+			<tr>
+				<td>careers</td>
+				<td>Sports</td>      
+			</tr>
+			<tr>
+				<td>Subscribes</td>
+				<td>Nature</td>
+			</tr>
+		</table>
+	</div>
+
+	
+	</body>
+
+</html>

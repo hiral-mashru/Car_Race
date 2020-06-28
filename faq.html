@@ -1,0 +1,302 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    <link rel="stylesheet" href="css/style.css">
+    <style> 
+    
+    
+    #id02{
+      background-color: #cc2262;
+      color: black;
+      height: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+    /* set a hover effect for the button*/ 
+    
+    
+    /*set extra style for the cancel button*/ 
+     .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px; 
+        background-color:grey;
+        color: black; 
+    } 
+    
+    /*centre the display image inside the container*/ 
+    /*.imgcontainer { 
+        text-align: center; 
+        margin: 24px 0 12px 0; 
+        position: relative; 
+    } 
+    
+    /*set image properties
+     img.avatar { 
+        width: 40%; 
+        border-radius: 50%; 
+    } */
+    
+    /*set padding to the container*/ 
+     .container { 
+        padding: 16px; 
+    } 
+      
+    /*set the forgot password text*/ 
+     span.psw { 
+        float: right; 
+        padding-top: 16px;
+        
+        padding-bottom: 20px; 
+    } 
+    
+    /*set the Modal background*/ 
+    .modal { 
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0, 0, 0); 
+        background-color: rgba(0, 0, 0, 0.4); 
+        padding-top: 60px; 
+
+    } 
+    
+    /*style the model content box*/ 
+    .modal-content { 
+        background-color: #fefefe; 
+        margin: 5% auto 15% auto; 
+        border: 1px solid #888; 
+        width: 80%; 
+        padding-bottom: 20px;
+    } 
+    
+    /*style the close button*/ 
+     .close { 
+        position: absolute; 
+        right: 25px; 
+        top: 0; 
+        color: #000; 
+        font-size: 35px; 
+        font-weight: bold; 
+    } 
+      
+    .close:hover, 
+    .close:focus { 
+        color: red; 
+        cursor: pointer; 
+    } 
+    
+    /* add zoom animation*/ 
+    .animate { 
+        -webkit-animation: animatezoom 0.6s; 
+        animation: animatezoom 0.6s 
+    } 
+      
+    @-webkit-keyframes animatezoom { 
+        from { 
+            -webkit-transform: scale(0) 
+        } 
+        to { 
+            -webkit-transform: scale(1) 
+        } 
+    } 
+      
+    @keyframes animatezoom { 
+        from { 
+            transform: scale(0) 
+        } 
+        to { 
+            transform: scale(1) 
+        } 
+    } 
+      
+    @media screen and (max-width: 300px) { 
+        span.psw { 
+            display: block; 
+            float: none;
+            margin-left: 10px; 
+        } 
+        .cancelbtn { 
+            width: 100%; 
+        } 
+    } 
+</style>
+  </head>
+  <body>
+      
+  <div class="load">
+        </div>
+      <div class="main">
+        <div class="box">
+        <div class="logo">
+          <img src="l.png">
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html">Game</a></li>
+          <li class="active"><a href="#">FAQs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border:none; font-size: 20px; ">Login</button> </li>
+          
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </div>
+      </div>
+      <div id="id01" class="modal"> 
+  
+        <form class="modal-content animate" action="/action_page.php"> 
+            <div class="imgcontainer"> 
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span> 
+                
+            </div> 
+  
+            <div class="container"> 
+                <label><b>Username</b></label> 
+                <input type="text" placeholder="Enter Username" name="uname" required style="width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; "> 
+  
+                <label><b>Password</b></label> 
+                <input type="password" placeholder="Enter Password" name="psw" required style="width: 100%; 
+        padding: 12px 20px; 
+        margin: 8px 0; 
+        display: inline-block; 
+        border: 1px solid #ccc; 
+        box-sizing: border-box; "> 
+  
+                <button type="submit" id="id02" style="color: white;       
+        background-color: grey;
+        cursor: pointer; 
+        width: 100%; ">Login</button> 
+                <input type="checkbox" checked="checked"> Remember me 
+            </div> 
+  
+            <div class="container" style="background-color:#f1f1f1"> 
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+                 <span class="psw" >Forgot <a href="pss.html">password?</a><br> Dont have an Account yet? <a href="register.html">Sign Up</a></span>
+
+                <!--<span class="psw"><br>Forgot <a href="#">password?</a></span> 
+-->
+                
+
+            </div> 
+
+        </form> 
+    </div> 
+  
+    <script type="text/javascript"> 
+        var modal = document.getElementById('id01'); 
+        window.onclick = function(event) { 
+            if (event.target == modal) { 
+                modal.style.display = "none"; 
+            } 
+        } 
+    </script>
+
+
+     <div class="help">     
+      <h1 style="color: #fff ">How can we help you</h1>
+      <input type="text" name="text" >      
+      <button type="submit" style="color: #fff; margin-bottom: 10px; font-weight: bold;">search</button>
+     </div>
+
+          <h1 style="margin-left: 100px;color: #1a5276;" > Frequently asked Questions </h1> 
+        
+      <div class="faq">
+
+
+  
+<button class="collapsible">Will the games play on my device?</button>
+<div class="content">
+  <p>All our online games will run on any browser that supports HTML5 (such as Chrome, Firefox, Safari, Edge, and IE). Run this HTML5 support validator to check your browser.  We don't recommend you use a phone for playing the games, since the screen may be too small. Instead, we recommend tablets, laptops and desk top computers. Important: your browser's cookies must be enabled, and your browser must support local memory (see "Storage" in the HTML5 Validator Report). </p>
+</div>
+<button class="collapsible">How do I get the codes?</button>
+<div class="content">
+  <p>To find the code (a randomly chosen word from the reading program lesson/workbook) open the web app for your program. For the Blast Off to Reading app, touch one of the game icons; you will then be taken to the activations page. </p>
+</div>
+<button class="collapsible">The game doesn't load, and there's a red loading line. What's happening?</button>
+<div class="content">
+  <p>Sometimes, on Chrome if Ad Blocker is on (you'll see the image below), Chrome will not allow the game to load (you'll see a red loading line instead of the blue line, and the game won't finish loading). Even though we do not use any advertisements on any of our games or on our website, sometimes Ad Blocker will cause a problem. </p>
+</div>
+<button class="collapsible">We live in an area that doesn't get the internet. Can we still use these programs?</button>
+<div class="content">
+  <p>Absolutely. In fact, the online games and tools were created a few years after the programs were published and in use. You can purchase flash cards for Blast Off to Reading! ® and A Workbook for Dyslexics; the same deck can be used for both programs, or you can make your own with index cards. We also sell physical games and have free printables available for you to make your own.</p>
+</div>
+<button class="collapsible">Some games work on my device and some don't. Why?</button>
+<div class="content">
+  <p>Typically, if one game runs the others should as well. However, each game will require memory (of various sizes) and it's possible that you did not have enough space. Note that our online games and tools are not guaranteed to run on your device. Please check that your device supports HTML5 (click here to run the HTML5 validator). </p>
+</div>
+<button class="collapsible">I use your program in my class, but can't get the app to run.</button>
+<div class="content">
+  <p>If you have trouble running an app and your device belongs to a school or other type of institution, contact your organization's IT administrator. Very often settings have been set to limit usages under these circumstances.</p>
+</div>
+<button class="collapsible">Help! The sound doesn't work on my iPad.</button>
+<div class="content">
+  <p>The software is written so that if the ringer is off and/or the mute is on, you won't get sound. Very often people are not aware that their settings are set to mute. To test this, use a pair of headphones. If you get sound with the headphones, then check your settings. </p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</div>
+         
+  <div class="bot">
+    <table width="100%">
+      <tr>
+        <td style="color: white"> About Us </td>
+        <td  style="color: white"> About Us </td>
+        <td  style="color: white"> Travel </td>
+        <td colspan="4" style="color: white" width="100">Contact Us</td>
+      </tr>
+      <tr>
+        <td rowspan="3">On this list you'll find the best PC games we're playing right now—recent singleplayer hits,<br> thriving esports, and a few modern classics that would improve any library.</td>
+        <td>advertise</td>
+        <td>Lifestyle</td>
+        <td width="25"><a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a></td>
+        <td width="25"><a href="https://twitter.com/" class="fa fa-twitter"></a></td>
+        <td width="25"><a href="https://www.youtube.com/" class="fa fa-youtube"></a></td>
+        <td width="25"><a href="https://www.instagram.com/" class="fa fa-instagram"></a></td>
+      </tr>
+      <tr>
+        <td>careers</td>
+        <td>Sports</td>      
+      </tr>
+      <tr>
+        <td>Subscribes</td>
+        <td>Nature</td>
+      </tr>
+    </table>
+  </div>
+            
+              
+              
+                 
+          
+            
+          
+   
+  </body>
+</html>

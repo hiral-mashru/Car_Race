@@ -1,0 +1,291 @@
+*{
+	font: Century Gothic;
+}
+
+
+
+.load{
+	animation: slide 2s;
+}
+
+.slider{
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	animation: slide 40s infinite;
+}
+
+header{
+	
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 35px;
+	padding:10px;
+	font-size: 20px;
+	
+
+
+}
+
+ul li{
+	display: inline-block;
+
+}
+
+ul li a{
+
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img{
+	float: left;
+	width: 250px;
+	height: auto;
+	margin-top: 25px;
+}
+
+
+.main1{
+	max-width: 1200px;
+	margin: auto;
+
+
+}
+.main{
+	overflow: hidden;
+	background-color: #565656;
+	padding-left:  100px;
+	padding-right: 100px;
+	margin: auto;
+}
+.title{
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+	color: #fff;
+	font-size: 70px;
+}
+
+button{
+	outline: none;
+	border: 1px solid #fff;
+	background-color: transparent;
+	padding: 10px 30px;
+	color: #fff;
+	border-radius: 12px;
+	text-decoration: none;
+	}
+
+button:hover {
+
+background-color: #fff;
+	color: #000;
+}
+
+#more{
+	display: none;
+}
+
+
+
+@keyframes slide{
+	0%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../1.jpg);
+	}
+
+	20%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../2.jpg);
+	}
+
+	20.01%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../1.jpg);
+	}
+
+	40%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../2.jpg);
+	}
+
+	40.01%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../1.jpg);
+	}
+
+	60%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../2.jpg);
+	}
+
+	60.01%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../1.jpg);
+	}
+
+	80%{		
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../2.jpg);
+	}
+
+	80.01%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../1.jpg);
+	}
+
+	100%{
+		background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../2.jpg);
+	}
+}
+
+
+#aboutus{
+	margin-top: 90px;
+	position: center;
+
+}
+
+.subs{
+	background-color: #84ceeb;
+ margin-top: 50px;
+	align-content: center;
+	text-align: center;
+	padding: 20px;
+}
+
+.subs input{
+
+width: 500px;
+height: 50px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.bot{
+	color: #b3b6b7 ;
+	background-color: #000033; 
+	padding: 100px;
+}
+
+.bot tr td:hover{
+
+	color: #fff;	
+}
+
+.bot .fa {
+  padding: 5px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.bot .fa:hover {
+    opacity: 0.7;
+}
+
+.bot .fa-facebook {
+  background: #000033;
+  color:  white;
+}
+
+.bot .fa-twitter {
+  background: #000033;
+  color:  white;
+}
+
+
+
+.bot .fa-youtube {
+  background: #000033;
+  color:white;
+}
+
+.bot .fa-instagram {
+  background: #000033;
+  color: white;
+}
+
+.faq{
+	padding: 50px;
+	padding-left: 250px;
+	padding-right:250px;
+	padding-top: 5px;
+}
+
+.help{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) , url(../hel.png);
+	background-size: 1500px 350px;
+	background-repeat: no-repeat;
+	align-content: center;
+	text-align: center;
+	padding: 20px;
+	padding-bottom: 80px;
+	
+
+}
+
+.help input{
+	width: 500px;
+	height: 50px;
+  border: 1px solid grey;
+  border-radius: 50px;
+
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin:1px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+	margin:1px;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
